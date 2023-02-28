@@ -136,7 +136,7 @@ canvas {
     display:block;
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color:rgba(0,0,180,0.7);
+    background-color:rgba(0,0,0,0);
     font-family: sans-serif;
     color: #FFF;
     width:86%;
