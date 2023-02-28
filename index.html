@@ -1,48 +1,30 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en-GB">
 <head>
-<meta charset="utf8">
+<meta charset="utf-8"/>
 <title>Bubble Shooter</title>
 <link href="_css/main.css" rel="stylesheet">
-<link href="_css/game.css" rel="stylesheet" />
-<script src="_js/modernizr.js"></script>
-<script>
-    Modernizr.load([{
-    load: "//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.js",
-    complete: function () {
-     if(!window.jQuery){
-    Modernizr.load("_js/jquery-1.8.2.min.js");
-    }
-    }
-    },
-    "_js/ui.js",
-    {
-        load: "_js/game.js",
-        complete: function(){
-            $(function(){
-            var game = new BubbleShoot.Game();
-            game.init();
- })
-}
-    }] );
-    </script>
-   </head>
+<script src="bubble.js"></script>
+</head>
 <body>
-    <div id="page">
-        <div id="top_bar"></div>
-        <div id="game">
-            <div id="board"></div>
-        </div>
-        <div id="footer_bar"></div>
-        <div id="start_game" class="dialog">
-             <div id="start_game_message">
-            <h2>Start a new game</h2>
-            </div>
-             <div class="but_start_game button">
-            New Game
-            </div>
-            </div>
-        </div>
+<h1 style="text-align:center;">Bubbles</h1>
+<div id="container">
+    <canvas id="c" width="300" height="400" ></canvas>
+    <canvas id="c2" width="300" height="400"></canvas>
+    <div id="menu-pause">
+        <ul class="menu-items">
+            <li id="action_restart">Restart</li>
+            <li id="action_resume">Resume</li>
+            <li id="action_about">About</li>
+        </ul>
+    </div>
+    <div id="menu-game-over" >
+        <h1 id="txt-win-lose"> Game Over! </h1>
+        <h2 style="display:none" id="txt-score"> Score: xx </h2>
+        <ul class="menu-items">
+            <li id="action_replay">Play Again</li>
+        </ul>
+    </div>
 </div>
 </body>
 </html>
